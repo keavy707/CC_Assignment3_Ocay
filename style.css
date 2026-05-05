@@ -193,12 +193,13 @@ body {
 }
 
 .inspo, .deliverables {
-    font-size: 1vw;
-    color: var(--text-dark);
+    font-size: 1.5 px;
+    color: var(--ds-blue);
     margin-top: 10px;
 }
 
 .deliverables li {
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
