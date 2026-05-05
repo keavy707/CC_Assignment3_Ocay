@@ -29,42 +29,48 @@ body {
     box-sizing: border-box;
     display: flex;
     overflow: hidden;
-    
 }
 
 /* --- HERO PAGE --- */
-.hero-frame {
+.hero-frame.center-layout {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
     padding: 0;
+    background-color: var(--ds-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Necessary for the bottom-aligned subtitle */
 }
 
-.hero-blue-side {
-    background-color: var(--ds-blue);
-    flex: 2;
+.hero-content {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 5vw;
+    justify-content: center; /* Centers the image vertically */
+    align-items: center;
+    padding: 10vh 10vw;      /* This creates the blue "border" effect around the title */
+    box-sizing: border-box;
 }
 
-.hero-img-placeholder {
-    background-color: var(--ds-orange);
-    height: 100%;
-    width: 100%;
-}
-
-.hero-title {
-    color: var(--text-white);
-    font-size: 8vw; /* Scales with screen width */
-    font-weight: 900;
-    margin: 0;
-    line-height: 0.9;
+.hero-title-image {
+    width: 100%;             /* Fills the container defined by the padding above */
+    max-width: 900px;       /* Keeps it from becoming overwhelming on big screens */
+    height: auto;
+    object-fit: contain;
 }
 
 .hero-subtitle {
+    position: absolute;
+    bottom: 5vh;
     color: var(--text-white);
-    font-size: 1.5vw;
-    margin-top: 20px;
+    font-size: 1.2vw;
+    margin: 0;
     letter-spacing: 1px;
+    text-align: center;
+    font-weight: 350;
 }
 
 /* --- ABOUT ME --- */
@@ -100,10 +106,15 @@ body {
 }
 
 .about-image-placeholder {
-    background-color: var(--ds-blue);
+    background-color: none;
     height: 100%;
     width: 100%;
+    display: flex;
+    overflow: hidden;
+    object-fit: contain;
+    object-position: center;
 }
+
 
 /* --- EVENT GRID --- */
 .event-grid {
